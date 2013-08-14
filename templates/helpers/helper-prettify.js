@@ -7,7 +7,7 @@
 
 var _ = require('lodash');
 
-module.exports.register = register = function(Handlebars, options) {
+module.exports.register = function(Handlebars, options) {
   var prettify = require('js-beautify').html;
 
   /**
