@@ -1,0 +1,19 @@
+---
+layout: layout.hbs
+---
+<div class="effeckt {{demo.modifier}} group">
+
+  <header>
+    <h2> {{demo.title}} <a href="{{demo.component}}.html">#</a> </h2>
+    {{#if demo.source}}
+    <span class="source">
+      Source: <a href="{{demo.source.url}}"> {{demo.source.name}} </a>
+    </span>
+    {{/if}}
+  </header>
+
+  {{!-- Ye Olde Komponente'
+  ================================== --}}
+  {{> body }}
+
+</div>

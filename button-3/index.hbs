@@ -1,0 +1,44 @@
+---
+layout: component.hbs
+---
+{{#repeat '10'}}
+<div class="button-demo-wrap">
+  {{> button button.expand-right }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.expand-left }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.expand-up }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.expand-down }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.slide-left }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.slide-right }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.slide-up }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.slide-down }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.zoom-out }}
+</div>
+
+<div class="button-demo-wrap">
+  {{> button button.zoom-in }}
+</div>
+{{/repeat}}

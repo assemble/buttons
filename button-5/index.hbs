@@ -1,0 +1,9 @@
+---
+layout: component.hbs
+---
+{{#each button}}
+<section id="{{@key}}-{{../title}}">
+  <h2>{{titleize @key}} {{../title}}</h2>
+  {{> button .}}
+</section>
+{{/each}}

@@ -1,0 +1,32 @@
+{
+  "expand-right": {
+    "label": "Expand Right"
+  },
+  "expand-left": {
+    "label": "Expand Left"
+  },
+  "expand-up": {
+    "label": "Expand Up"
+  },
+  "expand-down": {
+    "label": "Expand Down"
+  },
+  "slide-left": {
+    "label": "Slide Left"
+  },
+  "slide-right": {
+    "label": "Slide Right"
+  },
+  "slide-up": {
+    "label": "Slide Up"
+  },
+  "slide-down": {
+    "label": "Slide Down"
+  },
+  "zoom-out": {
+    "label": "Zoom Out"
+  },
+  "zoom-in": {
+    "label": "Zoom in"
+  }
+}

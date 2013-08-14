@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Expand Right",
+    "modifier": "expand-right"
+  },
+  {
+    "label": "Expand Left",
+    "modifier": "expand-left"
+  },
+  {
+    "label": "Expand Up",
+    "modifier": "expand-up"
+  },
+  {
+    "label": "Expand Down",
+    "modifier": "expand-down"
+  },
+  {
+    "label": "Slide Left",
+    "modifier": "slide-left"
+  },
+  {
+    "label": "Slide Right",
+    "modifier": "slide-right"
+  },
+  {
+    "label": "Slide Up",
+    "modifier": "slide-up"
+  },
+  {
+    "label": "Slide Down",
+    "modifier": "slide-down"
+  },
+  {
+    "label": "Zoom Out",
+    "modifier": "zoom-out"
+  },
+  {
+    "label": "Zoom in",
+    "modifier": "zoom-in"
+  }
+]

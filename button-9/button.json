@@ -1,0 +1,42 @@
+{
+  "expand-right": {
+    "label": "Expand Right",
+    "modifier": "expand-right"
+  },
+  "expand-left": {
+    "label": "Expand Left",
+    "modifier": "expand-left"
+  },
+  "expand-up": {
+    "label": "Expand Up",
+    "modifier": "expand-up"
+  },
+  "expand-down": {
+    "label": "Expand Down",
+    "modifier": "expand-down"
+  },
+  "slide-left": {
+    "label": "Slide Left",
+    "modifier": "slide-left"
+  },
+  "slide-right": {
+    "label": "Slide Right",
+    "modifier": "slide-right"
+  },
+  "slide-up": {
+    "label": "Slide Up",
+    "modifier": "slide-up"
+  },
+  "slide-down": {
+    "label": "Slide Down",
+    "modifier": "slide-down"
+  },
+  "zoom-out": {
+    "label": "Zoom Out",
+    "modifier": "zoom-out"
+  },
+  "zoom-in": {
+    "label": "Zoom in",
+    "modifier": "zoom-in"
+  }
+}

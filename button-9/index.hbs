@@ -1,0 +1,101 @@
+---
+layout: component.hbs
+
+# Example of using underscore templates
+# to externalize the config for the helpers.
+# The valuse are set in the Gruntfile, and
+# then passed into the context of the repeat
+# helper in the page.
+number:
+  expandright: "<%= repeat.expandright %>"
+  expandleft : "<%= repeat.expandleft %>"
+  expandup   : "<%= repeat.expandup %>"
+  expanddown : "<%= repeat.expanddown %>"
+  slideleft  : "<%= repeat.slideleft %>"
+  slideright : "<%= repeat.slideright %>"
+  slideup    : "<%= repeat.slideup %>"
+  slidedown  : "<%= repeat.slidedown %>"
+  zoomout    : "<%= repeat.zoomout %>"
+  zoomin     : "<%= repeat.zoomin %>"
+---
+
+<!-- button.expand-right -->
+
+{{#repeat number.expandright}}
+<div class="button-demo-wrap">
+  {{> button button.expand-right }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.expand-left -->
+
+{{#repeat number.expandleft}}
+<div class="button-demo-wrap">
+  {{> button button.expand-left }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.expand-up -->
+
+{{#repeat number.expandup}}
+<div class="button-demo-wrap">
+  {{> button button.expand-up }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.expand-down -->
+
+{{#repeat number.expanddown}}
+<div class="button-demo-wrap">
+  {{> button button.expand-down }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.slide-left -->
+
+{{#repeat number.slideleft}}
+<div class="button-demo-wrap">
+  {{> button button.slide-left }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.slide-right -->
+
+{{#repeat number.slideright}}
+<div class="button-demo-wrap">
+  {{> button button.slide-right }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.slide-up -->
+
+{{#repeat number.slideup}}
+<div class="button-demo-wrap">
+  {{> button button.slide-up }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.slide-down -->
+
+{{#repeat number.slidedown}}
+<div class="button-demo-wrap">
+  {{> button button.slide-down }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.zoom-out -->
+
+{{#repeat number.zoomout}}
+<div class="button-demo-wrap">
+  {{> button button.zoom-out }}
+</div>
+{{/repeat}}
+
+<hr> <!-- button.zoom-in -->
+
+{{#repeat number.zoomin}}
+<div class="button-demo-wrap">
+  {{> button button.zoom-in }}
+</div>
+{{/repeat}}
+
