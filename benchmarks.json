@@ -1,0 +1,167 @@
+{
+  "pages": {
+    "one": [
+      {
+        "filename": "button-7-1.html",
+        "data": {
+          "demo": {
+            "title": "Example 7-1: Topcoat Buttons + Effeckt.css",
+            "component": "buttons",
+            "modifier": "effeckt-demo-buttons",
+            "source": {
+              "name": "Hakim El Hattab",
+              "url": "http://lab.hakim.se/effeckt/"
+            }
+          }
+        },
+        "content": "\n{{#each button}} <div class=\"button-demo-wrap\"> {{> button }} </div> {{/each}}"
+      },
+      {
+        "filename": "button-7-2.html",
+        "data": {
+          "demo": {
+            "title": "Example 7-2: Topcoat Buttons + Effeckt.css",
+            "component": "buttons",
+            "modifier": "effeckt-demo-buttons",
+            "source": {
+              "name": "Hakim El Hattab",
+              "url": "http://lab.hakim.se/effeckt/"
+            }
+          }
+        },
+        "content": "\n{{#repeat 15}} <div class=\"button-demo-wrap\"> {{> button button.expand-right }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-7-3.html",
+        "data": {
+          "demo": {
+            "title": "Example 7-3: Topcoat Buttons + Effeckt.css",
+            "component": "buttons",
+            "modifier": "effeckt-demo-buttons",
+            "source": {
+              "name": "Hakim El Hattab",
+              "url": "http://lab.hakim.se/effeckt/"
+            }
+          }
+        },
+        "content": "\n{{#repeat 15}} <div class=\"button-demo-wrap\"> {{> button button.expand-right }} </div> {{/repeat}}"
+      }
+    ],
+    "two": [
+      {
+        "filename": "button-01-expand-right.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-right }} </div>"
+      },
+      {
+        "filename": "button-01-expand-left.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-left }} </div>"
+      },
+      {
+        "filename": "button-01-expand-up.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-up }} </div>"
+      },
+      {
+        "filename": "button-01-expand-down.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-down }} </div>"
+      },
+      {
+        "filename": "button-01-slide-left.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-left }} </div>"
+      },
+      {
+        "filename": "button-01-slide-right.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-right }} </div>"
+      },
+      {
+        "filename": "button-01-slide-up.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-up }} </div>"
+      },
+      {
+        "filename": "button-01-slide-down.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-down }} </div>"
+      },
+      {
+        "filename": "button-01-zoom-out.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.zoom-out }} </div>"
+      },
+      {
+        "filename": "button-01-zoom-in.html",
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.zoom-in }} </div>"
+      }
+    ],
+    "three": {
+      "button-02-expand-right.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-right }} </div>"
+      },
+      "button-02-expand-left.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-left }} </div>"
+      },
+      "button-02-expand-up.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-up }} </div>"
+      },
+      "button-02-expand-down.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.expand-down }} </div>"
+      },
+      "button-02-slide-left.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-left }} </div>"
+      },
+      "button-02-slide-right.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-right }} </div>"
+      },
+      "button-02-slide-up.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-up }} </div>"
+      },
+      "button-02-slide-down.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.slide-down }} </div>"
+      },
+      "button-02-zoom-out.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.zoom-out }} </div>"
+      },
+      "button-02-zoom-in.html": {
+        "content": "\n<div class=\"button-demo-wrap\"> {{> button button.zoom-in }} </div>"
+      }
+    },
+    "four": [
+      {
+        "filename": "button-expandright.html",
+        "content": "\n{{#repeat <%= repeat.expandright %>}} <div class=\"button-demo-wrap\"> {{> button button.expand-right }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-expandleft.html",
+        "content": "\n{{#repeat <%= repeat.expandleft %>}} <div class=\"button-demo-wrap\"> {{> button button.expand-left }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-expandup.html",
+        "content": "\n{{#repeat <%= repeat.expandup %>}} <div class=\"button-demo-wrap\"> {{> button button.expand-up }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-expanddown.html",
+        "content": "\n{{#repeat <%= repeat.expanddown %>}} <div class=\"button-demo-wrap\"> {{> button button.expand-down }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-slideleft.html",
+        "content": "\n{{#repeat <%= repeat.slideleft %>}} <div class=\"button-demo-wrap\"> {{> button button.slide-left }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-slideright.html",
+        "content": "\n{{#repeat <%= repeat.slideright %>}} <div class=\"button-demo-wrap\"> {{> button button.slide-right }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-slideup.html",
+        "content": "\n{{#repeat <%= repeat.slideup %>}} <div class=\"button-demo-wrap\"> {{> button button.slide-up }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-slidedown.html",
+        "content": "\n{{#repeat <%= repeat.slidedown %>}} <div class=\"button-demo-wrap\"> {{> button button.slide-down }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-zoomout.html",
+        "content": "\n{{#repeat <%= repeat.zoomout %>}} <div class=\"button-demo-wrap\"> {{> button button.zoom-out }} </div> {{/repeat}}"
+      },
+      {
+        "filename": "button-zoomin.html",
+        "content": "\n{{#repeat <%= repeat.zoomin %>}} <div class=\"button-demo-wrap\"> {{> button button.zoom-in }} </div> {{/repeat}}"
+      }
+    ]
+  }
+}

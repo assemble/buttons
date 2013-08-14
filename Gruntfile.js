@@ -9,8 +9,10 @@
 
 module.exports = function(grunt) {
 
+
   // Project configuration.
   grunt.initConfig({
+    benchmarks: grunt.file.readJSON('benchmarks.json'),
 
     // Values for repeat helper, see example #5.
     repeat: {
@@ -79,67 +81,24 @@ module.exports = function(grunt) {
           data: 'button-6/*.json'
         }
       },
-      // Pages collection, array format. Busy busy busy.
+      // Pages collection, array format.
       button7_1: {
         files: {'_demo/button-7/': ['button-7/index.hbs']},
         options: {
-          data: 'button-7/button.json',
+          data: ['button-7/button.json', 'benchmarks.json'],
           layout: 'component.hbs',
           partials: 'button-7/button.hbs',
-          pages: [
-            {
-              filename: 'button-7-1.html',
-              data: {
-                demo: {
-                  title: "Example 7-1: Topcoat Buttons + Effeckt.css",
-                  component: "buttons",
-                  modifier: "effeckt-demo-buttons",
-                  source: {name: "Hakim El Hattab", url: "http://lab.hakim.se/effeckt/"}
-                }
-              },
-              // all the buttons...
-              content: '\n{{#each button}} <div class="button-demo-wrap"> {{> button }} </div> {{/each}}'
-            },
-            {
-              filename: 'button-7-2.html',
-              data: {
-                demo: {
-                  title: "Example 7-2: Topcoat Buttons + Effeckt.css",
-                  component: "buttons",
-                  modifier: "effeckt-demo-buttons",
-                  source: {name: "Hakim El Hattab", url: "http://lab.hakim.se/effeckt/"}
-                }
-              },
-              // And... one button, repeating itself.
-              content: '\n{{#repeat 15}} <div class="button-demo-wrap"> {{> button button.expand-right }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-7-3.html',
-              data: grunt.file.readJSON('button-7/demo.json'), // just changing it up
-              content: '\n{{#repeat 15}} <div class="button-demo-wrap"> {{> button button.expand-right }} </div> {{/repeat}}'
-            }
-          ]
+          pages: '<%= benchmarks.pages.one %>'
         }
       },
-      // Pages collection, array format. Much cleaner.
+      // Pages collection, array format.
       button8_1: {
         files: {'_demo/button-8/': ['button-8/index.hbs']},
         options: {
           data: 'button-8/*.json',
           layout: 'component.hbs',
           partials: 'button-8/button.hbs',
-          pages: [
-            {filename: 'button-01-expand-right.html', content: '\n<div class="button-demo-wrap"> {{> button button.expand-right }} </div>'},
-            {filename: 'button-01-expand-left.html',  content: '\n<div class="button-demo-wrap"> {{> button button.expand-left }} </div>'},
-            {filename: 'button-01-expand-up.html',    content: '\n<div class="button-demo-wrap"> {{> button button.expand-up }} </div>'},
-            {filename: 'button-01-expand-down.html',  content: '\n<div class="button-demo-wrap"> {{> button button.expand-down }} </div>'},
-            {filename: 'button-01-slide-left.html',   content: '\n<div class="button-demo-wrap"> {{> button button.slide-left }} </div>'},
-            {filename: 'button-01-slide-right.html',  content: '\n<div class="button-demo-wrap"> {{> button button.slide-right }} </div>'},
-            {filename: 'button-01-slide-up.html',     content: '\n<div class="button-demo-wrap"> {{> button button.slide-up }} </div>'},
-            {filename: 'button-01-slide-down.html',   content: '\n<div class="button-demo-wrap"> {{> button button.slide-down }} </div>'},
-            {filename: 'button-01-zoom-out.html',     content: '\n<div class="button-demo-wrap"> {{> button button.zoom-out }} </div>'},
-            {filename: 'button-01-zoom-in.html',      content: '\n<div class="button-demo-wrap"> {{> button button.zoom-in }} </div>'}
-          ]
+          pages: '<%= benchmarks.pages.two %>'
         }
       },
       // Pages collection, object format.
@@ -149,97 +108,19 @@ module.exports = function(grunt) {
           data: 'button-8/*.json',
           layout: 'component.hbs',
           partials: 'button-8/button.hbs',
-          pages: {
-            'button-02-expand-right.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.expand-right }} </div>'
-            },
-            'button-02-expand-left.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.expand-left }} </div>'
-            },
-            'button-02-expand-up.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.expand-up }} </div>'
-            },
-            'button-02-expand-down.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.expand-down }} </div>'
-            },
-            'button-02-slide-left.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.slide-left }} </div>'
-            },
-            'button-02-slide-right.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.slide-right }} </div>'
-            },
-            'button-02-slide-up.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.slide-up }} </div>'
-            },
-            'button-02-slide-down.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.slide-down }} </div>'
-            },
-            'button-02-zoom-out.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.zoom-out }} </div>'
-            },
-            'button-02-zoom-in.html': {
-              content: '\n<div class="button-demo-wrap"> {{> button button.zoom-in }} </div>'
-            }
-          }
+          pages: '<%= benchmarks.pages.three %>'
         }
       },
-      // Pages collection, array format. Lodash templates, wait omg they're inside the Handlebars templates! Wha?!...
       button9: {
         files: {'_demo/button-9/': ['button-9/index.hbs']},
         options: {
           data: 'button-9/*.json',
           layout: 'component.hbs',
           partials: 'button-9/button.hbs',
-          pages: [
-            {
-              filename: 'button-expandright.html',
-              content: '\n{{#repeat <%= repeat.expandright %>}} <div class="button-demo-wrap"> {{> button button.expand-right }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-expandleft.html',
-              content: '\n{{#repeat <%= repeat.expandleft %>}} <div class="button-demo-wrap"> {{> button button.expand-left }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-expandup.html',
-              content: '\n{{#repeat <%= repeat.expandup %>}} <div class="button-demo-wrap"> {{> button button.expand-up }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-expanddown.html',
-              content: '\n{{#repeat <%= repeat.expanddown %>}} <div class="button-demo-wrap"> {{> button button.expand-down }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-slideleft.html',
-              content: '\n{{#repeat <%= repeat.slideleft %>}} <div class="button-demo-wrap"> {{> button button.slide-left }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-slideright.html',
-              content: '\n{{#repeat <%= repeat.slideright %>}} <div class="button-demo-wrap"> {{> button button.slide-right }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-slideup.html',
-              content: '\n{{#repeat <%= repeat.slideup %>}} <div class="button-demo-wrap"> {{> button button.slide-up }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-slidedown.html',
-              content: '\n{{#repeat <%= repeat.slidedown %>}} <div class="button-demo-wrap"> {{> button button.slide-down }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-zoomout.html',
-              content: '\n{{#repeat <%= repeat.zoomout %>}} <div class="button-demo-wrap"> {{> button button.zoom-out }} </div> {{/repeat}}'
-            },
-            {
-              filename: 'button-zoomin.html',
-              content: '\n{{#repeat <%= repeat.zoomin %>}} <div class="button-demo-wrap"> {{> button button.zoom-in }} </div> {{/repeat}}'
-            },
-          ]
+          pages: '<%= benchmarks.pages.four %>'
         }
-      },
-      // Placeholder for a navigation example.
-      // index: {
-      //   files: {'_demo/': ['templates/index.hbs']},
-      // }
+      }
     },
-
     // Before creating new files, remove files from previous build.
     clean: ['_demo/**/*.html']
 

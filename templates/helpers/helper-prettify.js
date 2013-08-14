@@ -58,3 +58,4 @@ module.exports.register = register = function(Handlebars, options) {
     }
   };
 };
+
