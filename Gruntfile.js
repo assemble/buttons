@@ -41,10 +41,7 @@ module.exports = function(grunt) {
         layout: 'layout.hbs',
       },
       button1: {
-        files: {'_demo/button-1/': ['button-1/index.hbs']},
-        options: {
-          partials: 'button-1/button.hbs'
-        }
+        files: {'_demo/button-1/': ['button-1/index.hbs']}
       },
       button2: {
         files: {'_demo/button-2/': ['button-2/index.hbs']},
