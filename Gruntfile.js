@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    benchmarks: grunt.file.readJSON('benchmarks.json'),
+    benchmarks: grunt.file.readJSON('data/benchmarks.json'),
 
     // Values for repeat helper, see example #5.
     repeat: {
@@ -30,90 +30,98 @@ module.exports = function(grunt) {
 
     assemble: {
       options: {
-        prettify: {
-          indent: 2
-        },
         flatten: true,
+        prettify: {indent: 2},
         assets: '_demo/assets',
         helpers: 'templates/helpers/*.js',
         partials: 'templates/includes/*.hbs',
-        layoutdir: 'templates',
-        layout: 'layout.hbs',
+        layoutdir: 'templates/layouts',
+        layout: 'default.hbs',
       },
-      button1: {
-        files: {'_demo/button-1/': ['button-1/index.hbs']}
+      button000: {
+        options: {layout: 'none'},
+        files: {'_demo/button-000/': ['button-000/index.html']}
       },
-      button2: {
-        files: {'_demo/button-2/': ['button-2/index.hbs']},
+      button010: {
         options: {
-          partials: 'button-2/button.hbs',
-          data: 'button-2/*.json'
+          partials: 'button-011/includes/*.hbs'
+        },
+        files: {
+          '_demo/button-010/':   ['button-010/index.hbs'],
+          '_demo/button-011/': ['button-011/index.hbs']
         }
       },
-      button3: {
-        files: {'_demo/button-3/': ['button-3/index.hbs']},
+      button020: {
         options: {
-          partials: 'button-3/button.hbs',
-          data: 'button-3/*.json'
-        }
+          partials: 'button-020/button.hbs',
+          data: 'button-020/*.json'
+        },
+        files: {'_demo/button-020/': ['button-020/index.hbs']}
       },
-      button4: {
-        files: {'_demo/button-4/': ['button-4/index.hbs']},
+      button030: {
         options: {
-          partials: 'button-4/button.hbs',
-          data: 'button-4/*.json'
-        }
+          partials: 'button-030/button.hbs',
+          data: 'button-030/*.json'
+        },
+        files: {'_demo/button-030/': ['button-030/index.hbs']}
       },
-      button5: {
-        files: {'_demo/button-5/': ['button-5/index.hbs']},
+      button040: {
         options: {
-          partials: 'button-5/button.hbs',
-          data: 'button-5/*.json'
-        }
+          partials: 'button-040/button.hbs',
+          data: 'button-040/*.json'
+        },
+        files: {'_demo/button-040/': ['button-040/index.hbs']}
       },
-      button6: {
-        files: {'_demo/button-6/': ['button-6/index.hbs']},
+      button050: {
         options: {
-          partials: 'button-6/button.hbs',
-          data: 'button-6/*.json'
-        }
+          partials: 'button-050/button.hbs',
+          data: 'button-050/*.json'
+        },
+        files: {'_demo/button-050/': ['button-050/index.hbs']}
+      },
+      button060: {
+        options: {
+          partials: 'button-060/button.hbs',
+          data: 'button-060/*.json'
+        },
+        files: {'_demo/button-060/': ['button-060/index.hbs']}
       },
       // Pages collection, array format.
-      button7_1: {
-        files: {'_demo/button-7/': ['button-7/index.hbs']},
+      button070: {
+        files: {'_demo/button-070/': ['button-070/index.hbs']},
         options: {
-          data: ['button-7/button.json', 'benchmarks.json'],
+          data: ['button-070/button.json', 'benchmarks.json'],
           layout: 'component.hbs',
-          partials: 'button-7/button.hbs',
+          partials: 'button-070/button.hbs',
           pages: '<%= benchmarks.pages.one %>'
         }
       },
       // Pages collection, array format.
-      button8_1: {
-        files: {'_demo/button-8/': ['button-8/index.hbs']},
+      button080: {
+        files: {'_demo/button-080/': ['button-080/index.hbs']},
         options: {
-          data: 'button-8/*.json',
+          data: 'button-080/*.json',
           layout: 'component.hbs',
-          partials: 'button-8/button.hbs',
+          partials: 'button-080/button.hbs',
           pages: '<%= benchmarks.pages.two %>'
         }
       },
       // Pages collection, object format.
-      button8_2: {
-        files: {'_demo/button-8/': ['button-8/index.hbs']},
+      button081: {
+        files: {'_demo/button-081/': ['button-080/index.hbs']},
         options: {
-          data: 'button-8/*.json',
+          data: 'button-080/*.json',
           layout: 'component.hbs',
-          partials: 'button-8/button.hbs',
+          partials: 'button-080/button.hbs',
           pages: '<%= benchmarks.pages.three %>'
         }
       },
-      button9: {
-        files: {'_demo/button-9/': ['button-9/index.hbs']},
+      button090: {
+        files: {'_demo/button-090/': ['button-090/index.hbs']},
         options: {
-          data: 'button-9/*.json',
+          data: 'button-090/*.json',
           layout: 'component.hbs',
-          partials: 'button-9/button.hbs',
+          partials: 'button-090/button.hbs',
           pages: '<%= benchmarks.pages.four %>'
         }
       }
