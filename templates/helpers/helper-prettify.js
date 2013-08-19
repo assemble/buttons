@@ -8,27 +8,31 @@
 var _ = require('lodash');
 
 module.exports.register = function(Handlebars, options) {
-
   var prettify = require('js-beautify').html;
-
+  var assembleOptions = options;
 
   /**
    * Prettify HTML output
-   *
    * @example:
    *   {{#prettify indent="2"}}
    *     {{> body }}
    *   {{/prettify}}
    */
   Handlebars.registerHelper('prettify', function (options) {
-    var hash = options.hash;
-    defaults = _.extend(hash, defaults);
+    var hash = _.extend({}, assembleOptions.prettify, options.hash);
+    var content = prettifyHTML(options.fn(this), hash);
 
-    return prettifyHTML(options.fn(this)
-      .replace(/(\n|\r){2,}/g, '\n') // reduce multiple newlines to a single newline
-      .replace(/(\s+<!--)/g, '\n$1'), defaults); // add a newline above each comment
+    // Reduce multiple newlines to a single newline
+    if(assembleOptions.prettify.condense === true) {
+      content = content.replace(/(\n|\r){2,}/g, '\n');
+    }
+    // Add a single newline above code comments.
+    if(assembleOptions.prettify.newlines === true) {
+      content = content.replace(/(\s*<!--)/g, '\n$1');
+    }
+
+    return content;
   });
-
 
   /**
    * Default options passed to js-beautify.
@@ -36,25 +40,18 @@ module.exports.register = function(Handlebars, options) {
    * @param {task options}   [Options defined in the task/target override hash arguments.]
    */
   var defaults = {
-    condense: true,
     indent_size: 2,
-    indent_char: " ",
     indent_inner_html: true,
-    indent_scripts: "normal",
-    brace_style: "expand",
-    preserve_newline: false,
-    max_preserve_newline: 0,
     unformatted: ['code', 'pre']
   };
-  defaults = _.extend(defaults, options.prettify);
+  defaults = _.extend(assembleOptions.prettify, defaults);
   defaults.indent_size = defaults.indent;
-
 
   /**
    * Format HTML with js-beautify, pass in options.
-   * @param   {String} source     [The un-prettified HTML.]
-   * @param   {Object} options   [Object of options passed to js-beautify.]
-   * @returns {String}            [Stunning HTML.]
+   * @param   {String} source  [The un-prettified HTML.]
+   * @param   {Object} options [Object of options passed to js-beautify.]
+   * @returns {String}         [Stunning HTML.]
    */
   var prettifyHTML = function(source, options) {
     try {

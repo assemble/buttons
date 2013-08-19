@@ -1,13 +1,11 @@
 /**
  * Duplicate the content in the encapsulated block n times.
- *
- * @param   {Number} n [Number of times to duplicate content.]
+ * @param {Number} n [Number of times to duplicate content.]
  * @example
  *    {{#repeat '10'}}
  *       {{> button }}
  *    {{/repeat}}
  */
-
 module.exports.register = function(Handlebars, options) {
   Handlebars.registerHelper('repeat', function(n, context) {
     var times = '';
