@@ -78,7 +78,8 @@ module.exports = function(grunt) {
         files: {'_demo/button-040/': ['button-040/index.hbs']},
         options: {
           partials: 'button-040/button.hbs',
-          data: 'button-040/*.json'
+          data: 'button-040/*.json',
+          styles: 'button-040/styles.css'
         }
       },
       button050: {
