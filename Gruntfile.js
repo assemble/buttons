@@ -82,6 +82,14 @@ module.exports = function(grunt) {
           styles: 'button-040/styles.css'
         }
       },
+      button041: {
+        files: {'_demo/button-041/': ['button-041/index.hbs']},
+        options: {
+          partials: 'button-041/button.hbs',
+          data: 'button-041/*.json',
+          styles: 'button-041/styles.css'
+        }
+      },
       button050: {
         files: {'_demo/button-050/': ['button-050/index.hbs']},
         options: {

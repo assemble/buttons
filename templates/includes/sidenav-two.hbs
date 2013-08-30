@@ -1,0 +1,8 @@
+<span class="nav-section-title">
+  Getting Started
+</span>
+{{#li pages class="nav nav-pills nav-stacked"}}
+  {{#is data.section "getting started"}}
+   <a href="{{relative ../../page.dest this.dest}}" {{> click-tracker }}>{{data.title}}</a>
+  {{/is}}
+{{/li}}

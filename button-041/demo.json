@@ -1,0 +1,11 @@
+{
+  "demo": {
+    "title": "Example 4: Topcoat Buttons + Effeckt.css",
+    "component": "buttons",
+    "modifier": "effeckt-demo-buttons",
+    "source": {
+      "name": "Hakim El Hattab",
+      "url": "http://lab.hakim.se/effeckt/"
+    }
+  }
+}
