@@ -1,0 +1,13 @@
+{
+    "source": "Source : ",
+    "expand_right": "Agrandir vers la Droite",
+    "expand_left": "Agrandir vers la Gauche",
+    "expand_up": "Agrandir vers le Haut",
+    "expand_down": "Agrandir vers le Bas",
+    "slide_left": "Glisser vers la Gauche",
+    "slide_right": "Glisser vers la Droite",
+    "slide_up": "Glisser vers le Haut",
+    "slide_down": "Glisser vers le Bas",
+    "zoom_out": "Zoom Avant",
+    "zoom_in": "Zoom Arrière"
+}
