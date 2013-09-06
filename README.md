@@ -12,7 +12,8 @@ For the purposes of this project let's agree that:
 * **style** refers to CSS, including pre-processors (here we use LESS, possibly SASS).
 * **structure** refers to HTML, including templates (here we use Handlebars templates).
 * **content** refers to any audial (sound), visual (video or images) or textual content that can be experienced directly by the user on a website or web application.
-* **data**, as distinguished from content, refers to any data that is used for configuration and will not be directly experienced by the user. So while "Click Me!" would be considered the "content" of a button, any "modifier classes" of the button stored in JSON or YAML would be considered "data".
+* **data**, as distinguished from "content", refers to any data that is used for configuration and will not be directly experienced by the user. So while "Click Me!" would be considered the "content" of a button, any "modifier classes" of the button stored in JSON or YAML would be considered "data". To be pragmatic, sometimes "data" and "content" are clumped together, but we try to differentiate when it makes sense.
+
 
 ## Approach
 
