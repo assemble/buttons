@@ -1,0 +1,13 @@
+{
+    "source": "Source: ",
+    "expand_right": "Expand Right",
+    "expand_left": "Expand Left",
+    "expand_up": "Expand Up",
+    "expand_down": "Expand Down",
+    "slide_left": "Slide Left",
+    "slide_right": "Slide Right",
+    "slide_up": "Slide Up",
+    "slide_down": "Slide Down",
+    "zoom_out": "Zoom Out",
+    "zoom_in": "Zoom In"
+}

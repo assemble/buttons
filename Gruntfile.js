@@ -142,7 +142,13 @@ module.exports = function(grunt) {
           partials: 'button-090/button.hbs',
           data: 'button-090/*.json',
         }
-      }
+      },
+      buttoni18n: {
+        files: {'_demo/button-i18n/': ['button-i18n/index-*.hbs']},
+        options: {
+            data: 'button-i18n/**/*.json'
+        }
+      },
     },
     // Before creating new files, remove files from previous build.
     clean: ['_demo/**/*.html']
