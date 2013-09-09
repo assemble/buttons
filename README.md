@@ -40,7 +40,7 @@ In other words, this project will give you examples but the opinions will be lef
 
 Would you like to add an example? Please do! Just fork the project and do pull request. I only ask that you attempt to number the example appropriately, according to the relative level of complexity of the example.
 
-Also, in lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][http://gruntjs.com/].
+Also, in lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).
 
 
 ## Author
