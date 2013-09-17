@@ -37,8 +37,8 @@ module.exports = function(grunt) {
           newlines: true
         },
         assets: '_demo/assets',
-        helpers: 'templates/helpers/*.js',
-        partials: 'templates/includes/*.hbs',
+        helpers: ['templates/helpers/*.js'],
+        partials: ['templates/includes/*.hbs'],
         layoutdir: 'templates/layouts',
         layout: 'default.hbs',
       },

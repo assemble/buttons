@@ -1,8 +1,8 @@
 # Buttons
 
-> How many ways are there to assemble a button?
+> How many ways are there to assemble a button? This project is an exercise in separation of concerns regarding structure, style, content and data.
 
-This project is an exercise in separation of concerns regarding structure, style, content and data. The primary goal is to clearly demonstrate how to construct UI components, from simple to advanced, using only buttons as the example.
+The primary goal is to clearly demonstrate how to use Assemble for constructing UI components from templates and data. In general, examples progress from simple to advanced and each example builds upon the previous one, both in terms of features and complexity.
 
 ## Conventions
 
@@ -27,18 +27,23 @@ As a rule of thumb, each example in the project demonstrates a different approac
 
 Not all examples explicitly focus on "separation of concerns" as the sole purpose of the example. Some examples show how to leverage JavaScript helpers alongside advanced templates, some offer alternatives for maintaining metadata about a component, while others are simply intended to help non-programmers get started or to give experienced programmers ideas.
 
-### Flow
 
-In general, the examples progress from "basic" to "advanced", beginning with [button-000](button-000), which should be more approachable for designers who have very little to no programming experience, eventually building up to more "complex" examples that might appeal to more experienced programmers.
+### Flow and Philosophy
 
-Also, since the project is expressly intended to be instructive, by necessity some of the examples _should not be idiomatic_. Furthermore, no judgement is made concerning how much abstraction is necessary, good, bad, idiomatic or otherwise. The driving assumption being that _it is equally instructive to see examples of code that is, say, more abstracted than it should be, as it is to see shining examples of perfection_. Especially when the user has the larger perspective of seeing multiple approaches for solving the same or similar problems.
+Examples attempt to progress from "basic" to "advanced" beginning with [button-000](button-000). If you feel that the buttons are not ordered properly, [please let us know](https://github.com/assemble/buttons/issues). The lower-numbered examples should be more approachable to non-programmers, while the higher-numbered examples might be more interesting to programmers who have more experience with templating frameworks.
 
-In other words, this project will give you examples but the opinions will be left to you.
+Since the project is expressly intended to be instructive, and not opinionated, by necessity some of the examples _should not be idiomatic_. So no judgement is made regarding how much abstraction is necessary, good, bad, idiomatic or otherwise. Some examples feature very little abstraction, others more, and some of the examples we have planned will demonstrate a radical degree of abstraction.
+
+Some examples will include commentary, which might include suggestions for decreasing abstraction, using a different format to supply data, and so on, but the intent is to offer alternatives for consideration, not to make assersions about which method is best. Ultimately the opinions will be left to you.
 
 
 ## Contributing
 
-Would you like to add an example? Please do! Just fork the project and do pull request. I only ask that you attempt to number the example appropriately, according to the relative level of complexity of the example.
+> Have an idea for an example? Please [let us know](https://github.com/assemble/buttons/issues) or consider adding it yourself.
+
+The easist way to show your support for the project is to "star" it.
+
+To add an example, just fork the project, make your changes and do pull request. We only ask that you attempt to number the example appropriately according to the relative level of complexity of the example, using the existing examples as a rule of thumb.
 
 Also, in lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][http://gruntjs.com/].
 
