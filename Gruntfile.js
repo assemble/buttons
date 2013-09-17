@@ -34,10 +34,10 @@ module.exports = function(grunt) {
         prettify: {
           indent: 2,
           condense: true,
-          newlines: true
+          padcomments: true
         },
         assets: '_demo/assets',
-        helpers: ['templates/helpers/*.js'],
+        helpers: ['helper-*'], // resolve helpers from node_modules
         partials: ['templates/includes/*.hbs'],
         layoutdir: 'templates/layouts',
         layout: 'default.hbs',
