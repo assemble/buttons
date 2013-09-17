@@ -45,7 +45,7 @@ The easist way to show your support for the project is to "star" it.
 
 To add an example, just fork the project, make your changes and do pull request. We only ask that you attempt to number the example appropriately according to the relative level of complexity of the example, using the existing examples as a rule of thumb.
 
-Also, in lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][http://gruntjs.com/].
+Also, in lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).
 
 
 ## Author
