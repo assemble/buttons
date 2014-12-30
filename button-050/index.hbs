@@ -2,8 +2,8 @@
 layout: component.hbs
 ---
 {{#each button}}
-<section id="{{@key}}-{{../title}}">
-  <h2>{{titleize @key}} {{../title}}</h2>
+<section id="{{@key}}-{{../demo.component}}">
+  <h2>{{titleize @key}} {{../demo.component}}</h2>
   {{> button .}}
 </section>
 {{/each}}
