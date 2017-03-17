@@ -15,7 +15,7 @@
     "url": "https://github.com/assemble/buttons/issues"
   },
   "engines": {
-    "node": ">=0.8"
+    "node": ">=0.10"
   },
   "scripts": {
     "test": "grunt assemble"
